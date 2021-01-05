@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IAIAPremiseTools", "IAIAPremiseTools\IAIAPremiseTools.vdproj", "{B4CFBFD0-82EE-43B7-A81B-883ADD5960D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4CFBFD0-82EE-43B7-A81B-883ADD5960D7}.Debug|Default.ActiveCfg = Debug
+		{B4CFBFD0-82EE-43B7-A81B-883ADD5960D7}.Debug|Default.Build.0 = Debug
+		{B4CFBFD0-82EE-43B7-A81B-883ADD5960D7}.Release|Default.ActiveCfg = Release
+		{B4CFBFD0-82EE-43B7-A81B-883ADD5960D7}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

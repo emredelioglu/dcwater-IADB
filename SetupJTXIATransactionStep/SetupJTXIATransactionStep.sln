@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupJTXIATransactionStep", "SetupJTXIATransactionStep.vdproj", "{C84A15D7-95C1-4215-811B-FBF7EC5DC9E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C84A15D7-95C1-4215-811B-FBF7EC5DC9E7}.Debug|Default.ActiveCfg = Debug
+		{C84A15D7-95C1-4215-811B-FBF7EC5DC9E7}.Debug|Default.Build.0 = Debug
+		{C84A15D7-95C1-4215-811B-FBF7EC5DC9E7}.Release|Default.ActiveCfg = Release
+		{C84A15D7-95C1-4215-811B-FBF7EC5DC9E7}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

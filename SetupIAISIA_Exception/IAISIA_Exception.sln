@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IAISIA_Exception", "IAISIA_Exception\IAISIA_Exception.vdproj", "{F2891A6D-56BC-44E5-A390-432A96E37ABA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2891A6D-56BC-44E5-A390-432A96E37ABA}.Debug|Default.ActiveCfg = Debug
+		{F2891A6D-56BC-44E5-A390-432A96E37ABA}.Debug|Default.Build.0 = Debug
+		{F2891A6D-56BC-44E5-A390-432A96E37ABA}.Release|Default.ActiveCfg = Release
+		{F2891A6D-56BC-44E5-A390-432A96E37ABA}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

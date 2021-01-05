@@ -1,0 +1,2050 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/newWebServices/LocationVerifier" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/newWebServices/LocationVerifier" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/newWebServices/LocationVerifier">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="verifyDCAddressThrouString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verifyDCAddressThrouStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="verifyDCAddressThrouStringResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="returnCodes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="details" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="returnDataset">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="returnBlkAddrDataset">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="returnCDDataSet">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="UNIT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNITNUMBER" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sourceOperation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="processTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="verifyDCAddressThrouComponents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddNumberSuffix" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Quad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verifyDCAddressThrouComponentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="verifyDCAddressThrouComponentsResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findOutsideLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zipcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findOutsideLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findOutsideLocationResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findInOutsideLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zipcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findInOutsideLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findInOutsideLocationResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findDCInterThrouString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Intersection" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findDCInterThrouStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findDCInterThrouStringResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findDCInterThrouComponents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="crossstreet1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="crossstreet2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findDCInterThrouComponentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findDCInterThrouComponentsResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findDCBlkThrouString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Block" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findDCBlkThrouStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findDCBlkThrouStringResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findDCBlkThrouComponents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="onstreet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromstreet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tostreet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findDCBlkThrouComponentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findDCBlkThrouComponentsResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findAddFromSSL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Square" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Suffix" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lot" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findAddFromSSLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findAddFromSSLResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findAddFromPlace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Place" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findAddFromPlaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findAddFromPlaceResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findAID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findAIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findAIDResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findLocationResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findRdWySegIDFromMiniMARID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiniMARADDID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findRdWySegIDFromMiniMARIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findRdWySegIDFromMiniMARIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findDCBlkFromIntersection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="crossstreet1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="crossstreet2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findDCBlkFromIntersectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findDCBlkFromIntersectionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findMARIDFromMiniMARID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="minimarid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findMARIDFromMiniMARIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findMARIDFromMiniMARIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findMiniMARIDFromMARID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="marid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findMiniMARIDFromMARIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findMiniMARIDFromMARIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reverseGeocoding">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="x" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="y" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reverseGeocodingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reverseGeocodingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="source" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="comment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="withVerification" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="submitAddressResult" type="tns:submitReturnObj" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="submitReturnObj">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ticketNum" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="findAddFromSSL_new">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Square" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Suffix" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lot" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findAddFromSSL_newResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findAddFromSSL_newResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findSSLFromAID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findSSLFromAIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findSSLFromAIDResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindCondoUnitFromAID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindCondoUnitFromAIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindCondoUnitFromAIDResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findAliasFromAID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findAliasFromAIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findAliasFromAIDResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findOwnerFromSSL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Square" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Suffix" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lot" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findOwnerFromSSLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findOwnerFromSSLResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findSSLFromSquareSuffix">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Square" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Suffix" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findSSLFromSquareSuffixResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findSSLFromSquareSuffixResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindUnitFromAID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindUnitFromAIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindUnitFromAIDResult" type="tns:ReturnObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReturnObject" nillable="true" type="tns:ReturnObject" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitReturnObj" nillable="true" type="tns:submitReturnObj" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="verifyDCAddressThrouStringSoapIn">
+    <wsdl:part name="parameters" element="tns:verifyDCAddressThrouString" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouStringSoapOut">
+    <wsdl:part name="parameters" element="tns:verifyDCAddressThrouStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouComponentsSoapIn">
+    <wsdl:part name="parameters" element="tns:verifyDCAddressThrouComponents" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouComponentsSoapOut">
+    <wsdl:part name="parameters" element="tns:verifyDCAddressThrouComponentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="findOutsideLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:findOutsideLocation" />
+  </wsdl:message>
+  <wsdl:message name="findOutsideLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:findOutsideLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="findInOutsideLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:findInOutsideLocation" />
+  </wsdl:message>
+  <wsdl:message name="findInOutsideLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:findInOutsideLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouStringSoapIn">
+    <wsdl:part name="parameters" element="tns:findDCInterThrouString" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouStringSoapOut">
+    <wsdl:part name="parameters" element="tns:findDCInterThrouStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouComponentsSoapIn">
+    <wsdl:part name="parameters" element="tns:findDCInterThrouComponents" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouComponentsSoapOut">
+    <wsdl:part name="parameters" element="tns:findDCInterThrouComponentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouStringSoapIn">
+    <wsdl:part name="parameters" element="tns:findDCBlkThrouString" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouStringSoapOut">
+    <wsdl:part name="parameters" element="tns:findDCBlkThrouStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouComponentsSoapIn">
+    <wsdl:part name="parameters" element="tns:findDCBlkThrouComponents" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouComponentsSoapOut">
+    <wsdl:part name="parameters" element="tns:findDCBlkThrouComponentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSLSoapIn">
+    <wsdl:part name="parameters" element="tns:findAddFromSSL" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSLSoapOut">
+    <wsdl:part name="parameters" element="tns:findAddFromSSLResponse" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromPlaceSoapIn">
+    <wsdl:part name="parameters" element="tns:findAddFromPlace" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromPlaceSoapOut">
+    <wsdl:part name="parameters" element="tns:findAddFromPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="findAIDSoapIn">
+    <wsdl:part name="parameters" element="tns:findAID" />
+  </wsdl:message>
+  <wsdl:message name="findAIDSoapOut">
+    <wsdl:part name="parameters" element="tns:findAIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="findLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:findLocation" />
+  </wsdl:message>
+  <wsdl:message name="findLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:findLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="findRdWySegIDFromMiniMARIDSoapIn">
+    <wsdl:part name="parameters" element="tns:findRdWySegIDFromMiniMARID" />
+  </wsdl:message>
+  <wsdl:message name="findRdWySegIDFromMiniMARIDSoapOut">
+    <wsdl:part name="parameters" element="tns:findRdWySegIDFromMiniMARIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkFromIntersectionSoapIn">
+    <wsdl:part name="parameters" element="tns:findDCBlkFromIntersection" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkFromIntersectionSoapOut">
+    <wsdl:part name="parameters" element="tns:findDCBlkFromIntersectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="findMARIDFromMiniMARIDSoapIn">
+    <wsdl:part name="parameters" element="tns:findMARIDFromMiniMARID" />
+  </wsdl:message>
+  <wsdl:message name="findMARIDFromMiniMARIDSoapOut">
+    <wsdl:part name="parameters" element="tns:findMARIDFromMiniMARIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="findMiniMARIDFromMARIDSoapIn">
+    <wsdl:part name="parameters" element="tns:findMiniMARIDFromMARID" />
+  </wsdl:message>
+  <wsdl:message name="findMiniMARIDFromMARIDSoapOut">
+    <wsdl:part name="parameters" element="tns:findMiniMARIDFromMARIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="reverseGeocodingSoapIn">
+    <wsdl:part name="parameters" element="tns:reverseGeocoding" />
+  </wsdl:message>
+  <wsdl:message name="reverseGeocodingSoapOut">
+    <wsdl:part name="parameters" element="tns:reverseGeocodingResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:submitAddress" />
+  </wsdl:message>
+  <wsdl:message name="submitAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:submitAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSL_newSoapIn">
+    <wsdl:part name="parameters" element="tns:findAddFromSSL_new" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSL_newSoapOut">
+    <wsdl:part name="parameters" element="tns:findAddFromSSL_newResponse" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromAIDSoapIn">
+    <wsdl:part name="parameters" element="tns:findSSLFromAID" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromAIDSoapOut">
+    <wsdl:part name="parameters" element="tns:findSSLFromAIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindCondoUnitFromAIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FindCondoUnitFromAID" />
+  </wsdl:message>
+  <wsdl:message name="FindCondoUnitFromAIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FindCondoUnitFromAIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="findAliasFromAIDSoapIn">
+    <wsdl:part name="parameters" element="tns:findAliasFromAID" />
+  </wsdl:message>
+  <wsdl:message name="findAliasFromAIDSoapOut">
+    <wsdl:part name="parameters" element="tns:findAliasFromAIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="findOwnerFromSSLSoapIn">
+    <wsdl:part name="parameters" element="tns:findOwnerFromSSL" />
+  </wsdl:message>
+  <wsdl:message name="findOwnerFromSSLSoapOut">
+    <wsdl:part name="parameters" element="tns:findOwnerFromSSLResponse" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromSquareSuffixSoapIn">
+    <wsdl:part name="parameters" element="tns:findSSLFromSquareSuffix" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromSquareSuffixSoapOut">
+    <wsdl:part name="parameters" element="tns:findSSLFromSquareSuffixResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindUnitFromAIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FindUnitFromAID" />
+  </wsdl:message>
+  <wsdl:message name="FindUnitFromAIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FindUnitFromAIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouStringHttpGetIn">
+    <wsdl:part name="Address" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouStringHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouComponentsHttpGetIn">
+    <wsdl:part name="AddNumber" type="s:string" />
+    <wsdl:part name="AddNumberSuffix" type="s:string" />
+    <wsdl:part name="StName" type="s:string" />
+    <wsdl:part name="StType" type="s:string" />
+    <wsdl:part name="Quad" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouComponentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findOutsideLocationHttpGetIn">
+    <wsdl:part name="Location" type="s:string" />
+    <wsdl:part name="City" type="s:string" />
+    <wsdl:part name="State" type="s:string" />
+    <wsdl:part name="Zipcode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findOutsideLocationHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findInOutsideLocationHttpGetIn">
+    <wsdl:part name="Location" type="s:string" />
+    <wsdl:part name="City" type="s:string" />
+    <wsdl:part name="State" type="s:string" />
+    <wsdl:part name="Zipcode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findInOutsideLocationHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouStringHttpGetIn">
+    <wsdl:part name="Intersection" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouStringHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouComponentsHttpGetIn">
+    <wsdl:part name="crossstreet1" type="s:string" />
+    <wsdl:part name="crossstreet2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouComponentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouStringHttpGetIn">
+    <wsdl:part name="Block" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouStringHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouComponentsHttpGetIn">
+    <wsdl:part name="onstreet" type="s:string" />
+    <wsdl:part name="fromstreet" type="s:string" />
+    <wsdl:part name="tostreet" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouComponentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSLHttpGetIn">
+    <wsdl:part name="Square" type="s:string" />
+    <wsdl:part name="Suffix" type="s:string" />
+    <wsdl:part name="Lot" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSLHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromPlaceHttpGetIn">
+    <wsdl:part name="Place" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromPlaceHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findAIDHttpGetIn">
+    <wsdl:part name="AID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findAIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findLocationHttpGetIn">
+    <wsdl:part name="str" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findLocationHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findRdWySegIDFromMiniMARIDHttpGetIn">
+    <wsdl:part name="MiniMARADDID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findRdWySegIDFromMiniMARIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkFromIntersectionHttpGetIn">
+    <wsdl:part name="crossstreet1" type="s:string" />
+    <wsdl:part name="crossstreet2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkFromIntersectionHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="findMARIDFromMiniMARIDHttpGetIn">
+    <wsdl:part name="minimarid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findMARIDFromMiniMARIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="findMiniMARIDFromMARIDHttpGetIn">
+    <wsdl:part name="marid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findMiniMARIDFromMARIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="reverseGeocodingHttpGetIn">
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="reverseGeocodingHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="submitAddressHttpGetIn">
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="source" type="s:string" />
+    <wsdl:part name="comment" type="s:string" />
+    <wsdl:part name="withVerification" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitAddressHttpGetOut">
+    <wsdl:part name="Body" element="tns:submitReturnObj" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSL_newHttpGetIn">
+    <wsdl:part name="Square" type="s:string" />
+    <wsdl:part name="Suffix" type="s:string" />
+    <wsdl:part name="Lot" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSL_newHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromAIDHttpGetIn">
+    <wsdl:part name="AID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromAIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="FindCondoUnitFromAIDHttpGetIn">
+    <wsdl:part name="AID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FindCondoUnitFromAIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findAliasFromAIDHttpGetIn">
+    <wsdl:part name="AID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findAliasFromAIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findOwnerFromSSLHttpGetIn">
+    <wsdl:part name="Square" type="s:string" />
+    <wsdl:part name="Suffix" type="s:string" />
+    <wsdl:part name="Lot" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findOwnerFromSSLHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromSquareSuffixHttpGetIn">
+    <wsdl:part name="Square" type="s:string" />
+    <wsdl:part name="Suffix" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromSquareSuffixHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="FindUnitFromAIDHttpGetIn">
+    <wsdl:part name="AID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FindUnitFromAIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouStringHttpPostIn">
+    <wsdl:part name="Address" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouStringHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouComponentsHttpPostIn">
+    <wsdl:part name="AddNumber" type="s:string" />
+    <wsdl:part name="AddNumberSuffix" type="s:string" />
+    <wsdl:part name="StName" type="s:string" />
+    <wsdl:part name="StType" type="s:string" />
+    <wsdl:part name="Quad" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyDCAddressThrouComponentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findOutsideLocationHttpPostIn">
+    <wsdl:part name="Location" type="s:string" />
+    <wsdl:part name="City" type="s:string" />
+    <wsdl:part name="State" type="s:string" />
+    <wsdl:part name="Zipcode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findOutsideLocationHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findInOutsideLocationHttpPostIn">
+    <wsdl:part name="Location" type="s:string" />
+    <wsdl:part name="City" type="s:string" />
+    <wsdl:part name="State" type="s:string" />
+    <wsdl:part name="Zipcode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findInOutsideLocationHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouStringHttpPostIn">
+    <wsdl:part name="Intersection" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouStringHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouComponentsHttpPostIn">
+    <wsdl:part name="crossstreet1" type="s:string" />
+    <wsdl:part name="crossstreet2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCInterThrouComponentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouStringHttpPostIn">
+    <wsdl:part name="Block" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouStringHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouComponentsHttpPostIn">
+    <wsdl:part name="onstreet" type="s:string" />
+    <wsdl:part name="fromstreet" type="s:string" />
+    <wsdl:part name="tostreet" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkThrouComponentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSLHttpPostIn">
+    <wsdl:part name="Square" type="s:string" />
+    <wsdl:part name="Suffix" type="s:string" />
+    <wsdl:part name="Lot" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSLHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromPlaceHttpPostIn">
+    <wsdl:part name="Place" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromPlaceHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findAIDHttpPostIn">
+    <wsdl:part name="AID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findAIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findLocationHttpPostIn">
+    <wsdl:part name="str" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findLocationHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findRdWySegIDFromMiniMARIDHttpPostIn">
+    <wsdl:part name="MiniMARADDID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findRdWySegIDFromMiniMARIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkFromIntersectionHttpPostIn">
+    <wsdl:part name="crossstreet1" type="s:string" />
+    <wsdl:part name="crossstreet2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findDCBlkFromIntersectionHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="findMARIDFromMiniMARIDHttpPostIn">
+    <wsdl:part name="minimarid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findMARIDFromMiniMARIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="findMiniMARIDFromMARIDHttpPostIn">
+    <wsdl:part name="marid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findMiniMARIDFromMARIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="reverseGeocodingHttpPostIn">
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="reverseGeocodingHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="submitAddressHttpPostIn">
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="source" type="s:string" />
+    <wsdl:part name="comment" type="s:string" />
+    <wsdl:part name="withVerification" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitAddressHttpPostOut">
+    <wsdl:part name="Body" element="tns:submitReturnObj" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSL_newHttpPostIn">
+    <wsdl:part name="Square" type="s:string" />
+    <wsdl:part name="Suffix" type="s:string" />
+    <wsdl:part name="Lot" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findAddFromSSL_newHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromAIDHttpPostIn">
+    <wsdl:part name="AID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromAIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="FindCondoUnitFromAIDHttpPostIn">
+    <wsdl:part name="AID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FindCondoUnitFromAIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findAliasFromAIDHttpPostIn">
+    <wsdl:part name="AID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findAliasFromAIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findOwnerFromSSLHttpPostIn">
+    <wsdl:part name="Square" type="s:string" />
+    <wsdl:part name="Suffix" type="s:string" />
+    <wsdl:part name="Lot" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findOwnerFromSSLHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromSquareSuffixHttpPostIn">
+    <wsdl:part name="Square" type="s:string" />
+    <wsdl:part name="Suffix" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findSSLFromSquareSuffixHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:message name="FindUnitFromAIDHttpPostIn">
+    <wsdl:part name="AID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FindUnitFromAIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReturnObject" />
+  </wsdl:message>
+  <wsdl:portType name="LocationVerifierSoap">
+    <wsdl:operation name="verifyDCAddress">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one concatenated DC address string.</documentation>
+      <wsdl:input name="verifyDCAddressThrouString" message="tns:verifyDCAddressThrouStringSoapIn" />
+      <wsdl:output name="verifyDCAddressThrouString" message="tns:verifyDCAddressThrouStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyDCAddress">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts four address components of an DC address.</documentation>
+      <wsdl:input name="verifyDCAddressThrouComponents" message="tns:verifyDCAddressThrouComponentsSoapIn" />
+      <wsdl:output name="verifyDCAddressThrouComponents" message="tns:verifyDCAddressThrouComponentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findOutsideLocation">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts a string containing an addresses or intersections that are outside DC boundary.</documentation>
+      <wsdl:input message="tns:findOutsideLocationSoapIn" />
+      <wsdl:output message="tns:findOutsideLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findInOutsideLocation">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts a string containing either an inside or outside DC addresses or intersections.</documentation>
+      <wsdl:input message="tns:findInOutsideLocationSoapIn" />
+      <wsdl:output message="tns:findInOutsideLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one concatenated DC intersection string containing two street names seperated by ' And ' or ' &amp; '.</documentation>
+      <wsdl:input name="findDCInterThrouString" message="tns:findDCInterThrouStringSoapIn" />
+      <wsdl:output name="findDCInterThrouString" message="tns:findDCInterThrouStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts two DC street name components.</documentation>
+      <wsdl:input name="findDCInterThrouComponents" message="tns:findDCInterThrouComponentsSoapIn" />
+      <wsdl:output name="findDCInterThrouComponents" message="tns:findDCInterThrouComponentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one string concatenated string with three DC street names separated by 'BETWEEN' and 'AND', or 'BLOCK', 'BLK'.  It verifies blocks inside DC boundary only.</documentation>
+      <wsdl:input name="findDCBlkThrouString" message="tns:findDCBlkThrouStringSoapIn" />
+      <wsdl:output name="findDCBlkThrouString" message="tns:findDCBlkThrouStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts three street name components.  It verifies blocks inside DC boundary only.</documentation>
+      <wsdl:input name="findDCBlkThrouComponents" message="tns:findDCBlkThrouComponentsSoapIn" />
+      <wsdl:output name="findDCBlkThrouComponents" message="tns:findDCBlkThrouComponentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts three input parameters, square, suffix, and lot.</documentation>
+      <wsdl:input message="tns:findAddFromSSLSoapIn" />
+      <wsdl:output message="tns:findAddFromSSLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromPlace">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one string containing a DC place name.</documentation>
+      <wsdl:input message="tns:findAddFromPlaceSoapIn" />
+      <wsdl:output message="tns:findAddFromPlaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one string containing a DC AID, only numeric value is allowed.</documentation>
+      <wsdl:input message="tns:findAIDSoapIn" />
+      <wsdl:output message="tns:findAIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findLocation">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Wrapper class for DC address, intersection, block, AID, and place name, not available for outside DC locations or SSL.</documentation>
+      <wsdl:input message="tns:findLocationSoapIn" />
+      <wsdl:output message="tns:findLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findRdWySegIDFromMiniMARID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find RoadwaySegID fro Routing from the Mini MAR address ID.</documentation>
+      <wsdl:input message="tns:findRdWySegIDFromMiniMARIDSoapIn" />
+      <wsdl:output message="tns:findRdWySegIDFromMiniMARIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findDCBlkFromIntersection">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find all blocks associated with an intersection, the street names input here must be perfect to make the result useful, we assume that user got the street name from MAR in a previous intersection verification process.</documentation>
+      <wsdl:input message="tns:findDCBlkFromIntersectionSoapIn" />
+      <wsdl:output message="tns:findDCBlkFromIntersectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findMARIDFromMiniMARID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find MiniMAR id from a given MAR Id.</documentation>
+      <wsdl:input message="tns:findMARIDFromMiniMARIDSoapIn" />
+      <wsdl:output message="tns:findMARIDFromMiniMARIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findMiniMARIDFromMARID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find MAR id from a given Mini MAR Id.</documentation>
+      <wsdl:input message="tns:findMiniMARIDFromMARIDSoapIn" />
+      <wsdl:output message="tns:findMiniMARIDFromMARIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="reverseGeocoding">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find MAR address/alias points within 100 meters from a given Maryland State Plane (NAD 83) coordinates and return the nearest five. Note: The radius is default to 100 meters. The returned distance unit is meter.</documentation>
+      <wsdl:input message="tns:reverseGeocodingSoapIn" />
+      <wsdl:output message="tns:reverseGeocodingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitAddress">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Submit addresses automatically(silently, set withVerification=false), or submit address that is Valid Not Veirifed after verification (set withVerification=true). The default value of withVerification is true</documentation>
+      <wsdl:input message="tns:submitAddressSoapIn" />
+      <wsdl:output message="tns:submitAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL_new">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts square, suffix, lot and return all AIDs associated with this SSL.</documentation>
+      <wsdl:input message="tns:findAddFromSSL_newSoapIn" />
+      <wsdl:output message="tns:findAddFromSSL_newSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all SSLs associated with this address id.</documentation>
+      <wsdl:input message="tns:findSSLFromAIDSoapIn" />
+      <wsdl:output message="tns:findSSLFromAIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCondoUnitFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all Condo Units associated with this address id.</documentation>
+      <wsdl:input message="tns:FindCondoUnitFromAIDSoapIn" />
+      <wsdl:output message="tns:FindCondoUnitFromAIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAliasFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all Aliases associated with this address id.</documentation>
+      <wsdl:input message="tns:findAliasFromAIDSoapIn" />
+      <wsdl:output message="tns:findAliasFromAIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findOwnerFromSSL">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts square, suffix, lot and return owners associated with this SSL.</documentation>
+      <wsdl:input message="tns:findOwnerFromSSLSoapIn" />
+      <wsdl:output message="tns:findOwnerFromSSLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromSquareSuffix">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts square and suffix (optional) and return All SSLs in this Square/Suffix.</documentation>
+      <wsdl:input message="tns:findSSLFromSquareSuffixSoapIn" />
+      <wsdl:output message="tns:findSSLFromSquareSuffixSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUnitFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all Residential Units associated with this address id.</documentation>
+      <wsdl:input message="tns:FindUnitFromAIDSoapIn" />
+      <wsdl:output message="tns:FindUnitFromAIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LocationVerifierHttpGet">
+    <wsdl:operation name="verifyDCAddress">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one concatenated DC address string.</documentation>
+      <wsdl:input name="verifyDCAddressThrouString" message="tns:verifyDCAddressThrouStringHttpGetIn" />
+      <wsdl:output name="verifyDCAddressThrouString" message="tns:verifyDCAddressThrouStringHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyDCAddress">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts four address components of an DC address.</documentation>
+      <wsdl:input name="verifyDCAddressThrouComponents" message="tns:verifyDCAddressThrouComponentsHttpGetIn" />
+      <wsdl:output name="verifyDCAddressThrouComponents" message="tns:verifyDCAddressThrouComponentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findOutsideLocation">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts a string containing an addresses or intersections that are outside DC boundary.</documentation>
+      <wsdl:input message="tns:findOutsideLocationHttpGetIn" />
+      <wsdl:output message="tns:findOutsideLocationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findInOutsideLocation">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts a string containing either an inside or outside DC addresses or intersections.</documentation>
+      <wsdl:input message="tns:findInOutsideLocationHttpGetIn" />
+      <wsdl:output message="tns:findInOutsideLocationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one concatenated DC intersection string containing two street names seperated by ' And ' or ' &amp; '.</documentation>
+      <wsdl:input name="findDCInterThrouString" message="tns:findDCInterThrouStringHttpGetIn" />
+      <wsdl:output name="findDCInterThrouString" message="tns:findDCInterThrouStringHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts two DC street name components.</documentation>
+      <wsdl:input name="findDCInterThrouComponents" message="tns:findDCInterThrouComponentsHttpGetIn" />
+      <wsdl:output name="findDCInterThrouComponents" message="tns:findDCInterThrouComponentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one string concatenated string with three DC street names separated by 'BETWEEN' and 'AND', or 'BLOCK', 'BLK'.  It verifies blocks inside DC boundary only.</documentation>
+      <wsdl:input name="findDCBlkThrouString" message="tns:findDCBlkThrouStringHttpGetIn" />
+      <wsdl:output name="findDCBlkThrouString" message="tns:findDCBlkThrouStringHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts three street name components.  It verifies blocks inside DC boundary only.</documentation>
+      <wsdl:input name="findDCBlkThrouComponents" message="tns:findDCBlkThrouComponentsHttpGetIn" />
+      <wsdl:output name="findDCBlkThrouComponents" message="tns:findDCBlkThrouComponentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts three input parameters, square, suffix, and lot.</documentation>
+      <wsdl:input message="tns:findAddFromSSLHttpGetIn" />
+      <wsdl:output message="tns:findAddFromSSLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromPlace">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one string containing a DC place name.</documentation>
+      <wsdl:input message="tns:findAddFromPlaceHttpGetIn" />
+      <wsdl:output message="tns:findAddFromPlaceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one string containing a DC AID, only numeric value is allowed.</documentation>
+      <wsdl:input message="tns:findAIDHttpGetIn" />
+      <wsdl:output message="tns:findAIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findLocation">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Wrapper class for DC address, intersection, block, AID, and place name, not available for outside DC locations or SSL.</documentation>
+      <wsdl:input message="tns:findLocationHttpGetIn" />
+      <wsdl:output message="tns:findLocationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findRdWySegIDFromMiniMARID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find RoadwaySegID fro Routing from the Mini MAR address ID.</documentation>
+      <wsdl:input message="tns:findRdWySegIDFromMiniMARIDHttpGetIn" />
+      <wsdl:output message="tns:findRdWySegIDFromMiniMARIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findDCBlkFromIntersection">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find all blocks associated with an intersection, the street names input here must be perfect to make the result useful, we assume that user got the street name from MAR in a previous intersection verification process.</documentation>
+      <wsdl:input message="tns:findDCBlkFromIntersectionHttpGetIn" />
+      <wsdl:output message="tns:findDCBlkFromIntersectionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findMARIDFromMiniMARID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find MiniMAR id from a given MAR Id.</documentation>
+      <wsdl:input message="tns:findMARIDFromMiniMARIDHttpGetIn" />
+      <wsdl:output message="tns:findMARIDFromMiniMARIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findMiniMARIDFromMARID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find MAR id from a given Mini MAR Id.</documentation>
+      <wsdl:input message="tns:findMiniMARIDFromMARIDHttpGetIn" />
+      <wsdl:output message="tns:findMiniMARIDFromMARIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="reverseGeocoding">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find MAR address/alias points within 100 meters from a given Maryland State Plane (NAD 83) coordinates and return the nearest five. Note: The radius is default to 100 meters. The returned distance unit is meter.</documentation>
+      <wsdl:input message="tns:reverseGeocodingHttpGetIn" />
+      <wsdl:output message="tns:reverseGeocodingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitAddress">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Submit addresses automatically(silently, set withVerification=false), or submit address that is Valid Not Veirifed after verification (set withVerification=true). The default value of withVerification is true</documentation>
+      <wsdl:input message="tns:submitAddressHttpGetIn" />
+      <wsdl:output message="tns:submitAddressHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL_new">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts square, suffix, lot and return all AIDs associated with this SSL.</documentation>
+      <wsdl:input message="tns:findAddFromSSL_newHttpGetIn" />
+      <wsdl:output message="tns:findAddFromSSL_newHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all SSLs associated with this address id.</documentation>
+      <wsdl:input message="tns:findSSLFromAIDHttpGetIn" />
+      <wsdl:output message="tns:findSSLFromAIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCondoUnitFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all Condo Units associated with this address id.</documentation>
+      <wsdl:input message="tns:FindCondoUnitFromAIDHttpGetIn" />
+      <wsdl:output message="tns:FindCondoUnitFromAIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAliasFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all Aliases associated with this address id.</documentation>
+      <wsdl:input message="tns:findAliasFromAIDHttpGetIn" />
+      <wsdl:output message="tns:findAliasFromAIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findOwnerFromSSL">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts square, suffix, lot and return owners associated with this SSL.</documentation>
+      <wsdl:input message="tns:findOwnerFromSSLHttpGetIn" />
+      <wsdl:output message="tns:findOwnerFromSSLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromSquareSuffix">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts square and suffix (optional) and return All SSLs in this Square/Suffix.</documentation>
+      <wsdl:input message="tns:findSSLFromSquareSuffixHttpGetIn" />
+      <wsdl:output message="tns:findSSLFromSquareSuffixHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUnitFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all Residential Units associated with this address id.</documentation>
+      <wsdl:input message="tns:FindUnitFromAIDHttpGetIn" />
+      <wsdl:output message="tns:FindUnitFromAIDHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LocationVerifierHttpPost">
+    <wsdl:operation name="verifyDCAddress">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one concatenated DC address string.</documentation>
+      <wsdl:input name="verifyDCAddressThrouString" message="tns:verifyDCAddressThrouStringHttpPostIn" />
+      <wsdl:output name="verifyDCAddressThrouString" message="tns:verifyDCAddressThrouStringHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyDCAddress">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts four address components of an DC address.</documentation>
+      <wsdl:input name="verifyDCAddressThrouComponents" message="tns:verifyDCAddressThrouComponentsHttpPostIn" />
+      <wsdl:output name="verifyDCAddressThrouComponents" message="tns:verifyDCAddressThrouComponentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findOutsideLocation">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts a string containing an addresses or intersections that are outside DC boundary.</documentation>
+      <wsdl:input message="tns:findOutsideLocationHttpPostIn" />
+      <wsdl:output message="tns:findOutsideLocationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findInOutsideLocation">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts a string containing either an inside or outside DC addresses or intersections.</documentation>
+      <wsdl:input message="tns:findInOutsideLocationHttpPostIn" />
+      <wsdl:output message="tns:findInOutsideLocationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one concatenated DC intersection string containing two street names seperated by ' And ' or ' &amp; '.</documentation>
+      <wsdl:input name="findDCInterThrouString" message="tns:findDCInterThrouStringHttpPostIn" />
+      <wsdl:output name="findDCInterThrouString" message="tns:findDCInterThrouStringHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts two DC street name components.</documentation>
+      <wsdl:input name="findDCInterThrouComponents" message="tns:findDCInterThrouComponentsHttpPostIn" />
+      <wsdl:output name="findDCInterThrouComponents" message="tns:findDCInterThrouComponentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one string concatenated string with three DC street names separated by 'BETWEEN' and 'AND', or 'BLOCK', 'BLK'.  It verifies blocks inside DC boundary only.</documentation>
+      <wsdl:input name="findDCBlkThrouString" message="tns:findDCBlkThrouStringHttpPostIn" />
+      <wsdl:output name="findDCBlkThrouString" message="tns:findDCBlkThrouStringHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts three street name components.  It verifies blocks inside DC boundary only.</documentation>
+      <wsdl:input name="findDCBlkThrouComponents" message="tns:findDCBlkThrouComponentsHttpPostIn" />
+      <wsdl:output name="findDCBlkThrouComponents" message="tns:findDCBlkThrouComponentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts three input parameters, square, suffix, and lot.</documentation>
+      <wsdl:input message="tns:findAddFromSSLHttpPostIn" />
+      <wsdl:output message="tns:findAddFromSSLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromPlace">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one string containing a DC place name.</documentation>
+      <wsdl:input message="tns:findAddFromPlaceHttpPostIn" />
+      <wsdl:output message="tns:findAddFromPlaceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts one string containing a DC AID, only numeric value is allowed.</documentation>
+      <wsdl:input message="tns:findAIDHttpPostIn" />
+      <wsdl:output message="tns:findAIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findLocation">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Wrapper class for DC address, intersection, block, AID, and place name, not available for outside DC locations or SSL.</documentation>
+      <wsdl:input message="tns:findLocationHttpPostIn" />
+      <wsdl:output message="tns:findLocationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findRdWySegIDFromMiniMARID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find RoadwaySegID fro Routing from the Mini MAR address ID.</documentation>
+      <wsdl:input message="tns:findRdWySegIDFromMiniMARIDHttpPostIn" />
+      <wsdl:output message="tns:findRdWySegIDFromMiniMARIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findDCBlkFromIntersection">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find all blocks associated with an intersection, the street names input here must be perfect to make the result useful, we assume that user got the street name from MAR in a previous intersection verification process.</documentation>
+      <wsdl:input message="tns:findDCBlkFromIntersectionHttpPostIn" />
+      <wsdl:output message="tns:findDCBlkFromIntersectionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findMARIDFromMiniMARID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find MiniMAR id from a given MAR Id.</documentation>
+      <wsdl:input message="tns:findMARIDFromMiniMARIDHttpPostIn" />
+      <wsdl:output message="tns:findMARIDFromMiniMARIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findMiniMARIDFromMARID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find MAR id from a given Mini MAR Id.</documentation>
+      <wsdl:input message="tns:findMiniMARIDFromMARIDHttpPostIn" />
+      <wsdl:output message="tns:findMiniMARIDFromMARIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="reverseGeocoding">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Find MAR address/alias points within 100 meters from a given Maryland State Plane (NAD 83) coordinates and return the nearest five. Note: The radius is default to 100 meters. The returned distance unit is meter.</documentation>
+      <wsdl:input message="tns:reverseGeocodingHttpPostIn" />
+      <wsdl:output message="tns:reverseGeocodingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitAddress">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Submit addresses automatically(silently, set withVerification=false), or submit address that is Valid Not Veirifed after verification (set withVerification=true). The default value of withVerification is true</documentation>
+      <wsdl:input message="tns:submitAddressHttpPostIn" />
+      <wsdl:output message="tns:submitAddressHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL_new">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts square, suffix, lot and return all AIDs associated with this SSL.</documentation>
+      <wsdl:input message="tns:findAddFromSSL_newHttpPostIn" />
+      <wsdl:output message="tns:findAddFromSSL_newHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all SSLs associated with this address id.</documentation>
+      <wsdl:input message="tns:findSSLFromAIDHttpPostIn" />
+      <wsdl:output message="tns:findSSLFromAIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCondoUnitFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all Condo Units associated with this address id.</documentation>
+      <wsdl:input message="tns:FindCondoUnitFromAIDHttpPostIn" />
+      <wsdl:output message="tns:FindCondoUnitFromAIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findAliasFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all Aliases associated with this address id.</documentation>
+      <wsdl:input message="tns:findAliasFromAIDHttpPostIn" />
+      <wsdl:output message="tns:findAliasFromAIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findOwnerFromSSL">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts square, suffix, lot and return owners associated with this SSL.</documentation>
+      <wsdl:input message="tns:findOwnerFromSSLHttpPostIn" />
+      <wsdl:output message="tns:findOwnerFromSSLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromSquareSuffix">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts square and suffix (optional) and return All SSLs in this Square/Suffix.</documentation>
+      <wsdl:input message="tns:findSSLFromSquareSuffixHttpPostIn" />
+      <wsdl:output message="tns:findSSLFromSquareSuffixHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUnitFromAID">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Accepts address id and return all Residential Units associated with this address id.</documentation>
+      <wsdl:input message="tns:FindUnitFromAIDHttpPostIn" />
+      <wsdl:output message="tns:FindUnitFromAIDHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LocationVerifierSoap" type="tns:LocationVerifierSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="verifyDCAddress">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/verifyDCAddressThrouString" style="document" />
+      <wsdl:input name="verifyDCAddressThrouString">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="verifyDCAddressThrouString">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyDCAddress">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/verifyDCAddressThrouComponents" style="document" />
+      <wsdl:input name="verifyDCAddressThrouComponents">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="verifyDCAddressThrouComponents">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOutsideLocation">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findOutsideLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findInOutsideLocation">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findInOutsideLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findDCInterThrouString" style="document" />
+      <wsdl:input name="findDCInterThrouString">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="findDCInterThrouString">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findDCInterThrouComponents" style="document" />
+      <wsdl:input name="findDCInterThrouComponents">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="findDCInterThrouComponents">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findDCBlkThrouString" style="document" />
+      <wsdl:input name="findDCBlkThrouString">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="findDCBlkThrouString">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findDCBlkThrouComponents" style="document" />
+      <wsdl:input name="findDCBlkThrouComponents">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="findDCBlkThrouComponents">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findAddFromSSL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromPlace">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findAddFromPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAID">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findAID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLocation">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findRdWySegIDFromMiniMARID">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findRdWySegIDFromMiniMARID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDCBlkFromIntersection">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findDCBlkFromIntersection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findMARIDFromMiniMARID">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findMARIDFromMiniMARID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findMiniMARIDFromMARID">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findMiniMARIDFromMARID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverseGeocoding">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/reverseGeocoding" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitAddress">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/submitAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL_new">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findAddFromSSL_new" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromAID">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findSSLFromAID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCondoUnitFromAID">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/FindCondoUnitFromAID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAliasFromAID">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findAliasFromAID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOwnerFromSSL">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findOwnerFromSSL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromSquareSuffix">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/findSSLFromSquareSuffix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUnitFromAID">
+      <soap:operation soapAction="http://tempuri.org/newWebServices/LocationVerifier/FindUnitFromAID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LocationVerifierHttpGet" type="tns:LocationVerifierHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="verifyDCAddress">
+      <http:operation location="/verifyDCAddressThrouString" />
+      <wsdl:input name="verifyDCAddressThrouString">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="verifyDCAddressThrouString">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyDCAddress">
+      <http:operation location="/verifyDCAddressThrouComponents" />
+      <wsdl:input name="verifyDCAddressThrouComponents">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="verifyDCAddressThrouComponents">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOutsideLocation">
+      <http:operation location="/findOutsideLocation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findInOutsideLocation">
+      <http:operation location="/findInOutsideLocation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <http:operation location="/findDCInterThrouString" />
+      <wsdl:input name="findDCInterThrouString">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="findDCInterThrouString">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <http:operation location="/findDCInterThrouComponents" />
+      <wsdl:input name="findDCInterThrouComponents">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="findDCInterThrouComponents">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <http:operation location="/findDCBlkThrouString" />
+      <wsdl:input name="findDCBlkThrouString">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="findDCBlkThrouString">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <http:operation location="/findDCBlkThrouComponents" />
+      <wsdl:input name="findDCBlkThrouComponents">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="findDCBlkThrouComponents">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL">
+      <http:operation location="/findAddFromSSL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromPlace">
+      <http:operation location="/findAddFromPlace" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAID">
+      <http:operation location="/findAID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLocation">
+      <http:operation location="/findLocation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findRdWySegIDFromMiniMARID">
+      <http:operation location="/findRdWySegIDFromMiniMARID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDCBlkFromIntersection">
+      <http:operation location="/findDCBlkFromIntersection" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findMARIDFromMiniMARID">
+      <http:operation location="/findMARIDFromMiniMARID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findMiniMARIDFromMARID">
+      <http:operation location="/findMiniMARIDFromMARID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverseGeocoding">
+      <http:operation location="/reverseGeocoding" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitAddress">
+      <http:operation location="/submitAddress" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL_new">
+      <http:operation location="/findAddFromSSL_new" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromAID">
+      <http:operation location="/findSSLFromAID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCondoUnitFromAID">
+      <http:operation location="/FindCondoUnitFromAID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAliasFromAID">
+      <http:operation location="/findAliasFromAID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOwnerFromSSL">
+      <http:operation location="/findOwnerFromSSL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromSquareSuffix">
+      <http:operation location="/findSSLFromSquareSuffix" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUnitFromAID">
+      <http:operation location="/FindUnitFromAID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LocationVerifierHttpPost" type="tns:LocationVerifierHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="verifyDCAddress">
+      <http:operation location="/verifyDCAddressThrouString" />
+      <wsdl:input name="verifyDCAddressThrouString">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="verifyDCAddressThrouString">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyDCAddress">
+      <http:operation location="/verifyDCAddressThrouComponents" />
+      <wsdl:input name="verifyDCAddressThrouComponents">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="verifyDCAddressThrouComponents">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOutsideLocation">
+      <http:operation location="/findOutsideLocation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findInOutsideLocation">
+      <http:operation location="/findInOutsideLocation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <http:operation location="/findDCInterThrouString" />
+      <wsdl:input name="findDCInterThrouString">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="findDCInterThrouString">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDCIntersection">
+      <http:operation location="/findDCInterThrouComponents" />
+      <wsdl:input name="findDCInterThrouComponents">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="findDCInterThrouComponents">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <http:operation location="/findDCBlkThrouString" />
+      <wsdl:input name="findDCBlkThrouString">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="findDCBlkThrouString">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findBlock">
+      <http:operation location="/findDCBlkThrouComponents" />
+      <wsdl:input name="findDCBlkThrouComponents">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="findDCBlkThrouComponents">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL">
+      <http:operation location="/findAddFromSSL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromPlace">
+      <http:operation location="/findAddFromPlace" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAID">
+      <http:operation location="/findAID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLocation">
+      <http:operation location="/findLocation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findRdWySegIDFromMiniMARID">
+      <http:operation location="/findRdWySegIDFromMiniMARID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDCBlkFromIntersection">
+      <http:operation location="/findDCBlkFromIntersection" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findMARIDFromMiniMARID">
+      <http:operation location="/findMARIDFromMiniMARID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findMiniMARIDFromMARID">
+      <http:operation location="/findMiniMARIDFromMARID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverseGeocoding">
+      <http:operation location="/reverseGeocoding" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitAddress">
+      <http:operation location="/submitAddress" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAddFromSSL_new">
+      <http:operation location="/findAddFromSSL_new" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromAID">
+      <http:operation location="/findSSLFromAID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCondoUnitFromAID">
+      <http:operation location="/FindCondoUnitFromAID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAliasFromAID">
+      <http:operation location="/findAliasFromAID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOwnerFromSSL">
+      <http:operation location="/findOwnerFromSSL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findSSLFromSquareSuffix">
+      <http:operation location="/findSSLFromSquareSuffix" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUnitFromAID">
+      <http:operation location="/FindUnitFromAID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LocationVerifier">
+    <wsdl:port name="LocationVerifierSoap" binding="tns:LocationVerifierSoap">
+      <soap:address location="http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LocationVerifierHttpGet" binding="tns:LocationVerifierHttpGet">
+      <http:address location="http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LocationVerifierHttpPost" binding="tns:LocationVerifierHttpPost">
+      <http:address location="http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

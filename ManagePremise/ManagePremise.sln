@@ -1,0 +1,71 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ManagePremise", "ManagePremise.vbproj", "{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IAISUtil", "..\IAISUtil\IAISUtil\IAISUtil.vbproj", "{EFC9B42D-483B-41AF-A187-4AE2C610CA63}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IAISPremiseTools", "..\SetupIAISPremiseTools\IAIAPremiseTools\IAIAPremiseTools.vdproj", "{8356F007-9366-41A0-96BF-41D91FF6BBB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		deb|Any CPU = deb|Any CPU
+		deb|x86 = deb|x86
+		deb2|Any CPU = deb2|Any CPU
+		deb2|x86 = deb2|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.deb|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.deb|Any CPU.Build.0 = Debug|Any CPU
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.deb|x86.ActiveCfg = deb2|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.deb|x86.Build.0 = deb2|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.deb2|Any CPU.ActiveCfg = deb2|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.deb2|Any CPU.Build.0 = deb2|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.deb2|x86.ActiveCfg = deb2|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.deb2|x86.Build.0 = deb2|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.Debug|Any CPU.Build.0 = Debug|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.Debug|x86.ActiveCfg = Debug|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.Debug|x86.Build.0 = Debug|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.Release|x86.ActiveCfg = Release|x86
+		{2A7C2799-4367-4AC5-957F-5D86F7EC7D5A}.Release|x86.Build.0 = Release|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.deb|Any CPU.ActiveCfg = deb|Any CPU
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.deb|Any CPU.Build.0 = deb|Any CPU
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.deb|x86.ActiveCfg = deb|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.deb|x86.Build.0 = deb|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.deb2|Any CPU.ActiveCfg = deb|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.deb2|Any CPU.Build.0 = deb|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.deb2|x86.ActiveCfg = deb|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.deb2|x86.Build.0 = deb|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.Debug|Any CPU.Build.0 = Debug|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.Debug|x86.ActiveCfg = Debug|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.Debug|x86.Build.0 = Debug|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.Release|x86.ActiveCfg = Release|x86
+		{EFC9B42D-483B-41AF-A187-4AE2C610CA63}.Release|x86.Build.0 = Release|x86
+		{8356F007-9366-41A0-96BF-41D91FF6BBB0}.deb|Any CPU.ActiveCfg = Release
+		{8356F007-9366-41A0-96BF-41D91FF6BBB0}.deb|x86.ActiveCfg = Release
+		{8356F007-9366-41A0-96BF-41D91FF6BBB0}.deb2|Any CPU.ActiveCfg = Release
+		{8356F007-9366-41A0-96BF-41D91FF6BBB0}.deb2|x86.ActiveCfg = Release
+		{8356F007-9366-41A0-96BF-41D91FF6BBB0}.Debug|Any CPU.ActiveCfg = Release
+		{8356F007-9366-41A0-96BF-41D91FF6BBB0}.Debug|x86.ActiveCfg = Release
+		{8356F007-9366-41A0-96BF-41D91FF6BBB0}.Release|Any CPU.ActiveCfg = Release
+		{8356F007-9366-41A0-96BF-41D91FF6BBB0}.Release|Any CPU.Build.0 = Release
+		{8356F007-9366-41A0-96BF-41D91FF6BBB0}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCC22C12-A533-42CF-B241-5C423B452769}
+	EndGlobalSection
+EndGlobal

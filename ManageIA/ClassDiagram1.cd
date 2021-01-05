@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IAIS.IABreak">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAgAAAAAoAAAIDAAAACACEAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>IABreak.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IAIS.IABuldManual">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEBAACAgAQAAAoAAIITACAACIDMACAAEEAABAAACAAA=</HashCode>
+      <FileName>IABuldManual.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IAIS.IAAssign">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAgAAAAAoAAAIDAAAACACEAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>IAAssign.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IAIS.clsIAISException" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGwAAIQEAIEgAgAAAAAAIAQIAEAAAAAAEMAEQMBAQAA=</HashCode>
+      <FileName>clsIAISException.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IAIS.ManageColConflict">
+    <Position X="7.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAgAAAAAoAAAIDAQAACACAAACAAEAAAAAAAAAA=</HashCode>
+      <FileName>ManageColConflict.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

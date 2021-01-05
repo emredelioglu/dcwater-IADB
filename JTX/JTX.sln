@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RecordTransaction", "RecordTransaction\RecordTransaction.vbproj", "{192F6C36-EEA2-43E9-893B-90879EEC2A7C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupJTXIATransactionStep", "..\SetupJTXIATransactionStep\SetupJTXIATransactionStep.vdproj", "{649B7D73-68AB-44FC-B12B-ADBCE6077B75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{192F6C36-EEA2-43E9-893B-90879EEC2A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192F6C36-EEA2-43E9-893B-90879EEC2A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192F6C36-EEA2-43E9-893B-90879EEC2A7C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{192F6C36-EEA2-43E9-893B-90879EEC2A7C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{649B7D73-68AB-44FC-B12B-ADBCE6077B75}.Debug|Any CPU.ActiveCfg = Debug
+		{649B7D73-68AB-44FC-B12B-ADBCE6077B75}.Debug|Any CPU.Build.0 = Debug
+		{649B7D73-68AB-44FC-B12B-ADBCE6077B75}.Release|Any CPU.ActiveCfg = Debug
+		{649B7D73-68AB-44FC-B12B-ADBCE6077B75}.Release|Any CPU.Build.0 = Debug
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B300BE72-BD1A-460C-B569-42D014C3564A}
+	EndGlobalSection
+EndGlobal
